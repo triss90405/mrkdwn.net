@@ -1,4 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+body.dark {
+  color: #ebedec; }
+  body.dark nav, body.dark footer {
+    background: #4c5870; }
+  body.dark .editor {
+    color: #ebedec;
+    background: #3d3d3b; }
+  body.dark .preview {
+    background: #232322; }
+  body.dark .dropdown ul {
+    background: #3d3d3b;
+    border-color: #3d3d3b; }
+    body.dark .dropdown ul:after {
+      border-bottom-color: #4c5870; }
+    body.dark .dropdown ul li:first-of-type:after {
+      border-bottom-color: #3d3d3b; }
+    body.dark .dropdown ul li:hover {
+      background: #4c5870;
+      color: #ebedec; }
+
 * {
   box-sizing: border-box; }
 
@@ -588,7 +608,7 @@ label {
     label:hover #arrow-down path {
       fill: #3d3d3b; }
 
-ul {
+ul.dropdown-menu {
   position: absolute;
   padding: 4px 0;
   top: 20px;
@@ -603,14 +623,14 @@ ul {
   visibility: hidden;
   text-align: left;
   transition: all 200ms; }
-  ul:before {
+  ul.dropdown-menu:before {
     content: '';
     position: absolute;
     top: -12px;
     height: 12px;
     width: 100%;
     background-color: transparent; }
-  ul:after {
+  ul.dropdown-menu:after {
     content: '';
     position: absolute;
     right: 6px;
@@ -619,15 +639,15 @@ ul {
     width: 0;
     border: 8px solid transparent;
     border-bottom-color: #cccccc; }
-  ul li {
+  ul.dropdown-menu li {
     padding: 5px 10px;
     color: #999999;
     cursor: pointer;
     transition: all 100ms; }
-    ul li:hover {
+    ul.dropdown-menu li:hover {
       background-color: #e6e6e6;
       color: black; }
-    ul li:first-of-type:after {
+    ul.dropdown-menu li:first-of-type:after {
       content: '';
       position: absolute;
       right: 6px;
@@ -638,8 +658,8 @@ ul {
       border: 8px solid transparent;
       border-bottom-color: white;
       pointer-events: none; }
-    ul li span.dark,
-    ul li span.light {
+    ul.dropdown-menu li span.dark,
+    ul.dropdown-menu li span.light {
       display: inline-block;
       height: 16px;
       width: 16px;
@@ -648,7 +668,7 @@ ul {
       left: 5px;
       border-radius: 50%;
       border: 1px solid #4c5870; }
-    ul li span.dark {
+    ul.dropdown-menu li span.dark {
       background: black; }
-    ul li span.light {
+    ul.dropdown-menu li span.light {
       background: white; }

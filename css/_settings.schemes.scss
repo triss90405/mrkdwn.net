@@ -1,0 +1,27 @@
+body.dark {
+  nav, footer {
+    background: $color2;
+  }
+  color: $color3;
+  .editor {
+    color: $color3;
+    background: $color1;
+  }
+  .preview {
+    background: darken($color1, 10%);
+  }
+  .dropdown ul {
+    background: $color1;
+    border-color: $color1;
+    &:after {
+      border-bottom-color: $color2;
+    }
+    li:first-of-type:after {
+      border-bottom-color: $color1;
+    }
+    li:hover {
+      background: $color2;
+      color: $color3;
+    }
+  }
+}
