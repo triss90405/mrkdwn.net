@@ -1,6 +1,6 @@
 .wrapper {
   width: 100vw;
-  min-height: 100vh;
+  height: calc(100vh - 75px); // Subtracting footer(20px) and navigation(50px) height
   display: flex;
   @media(max-width: 768px) {
     flex-wrap: wrap;

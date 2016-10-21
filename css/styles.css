@@ -409,7 +409,8 @@ template {
 html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  color: #3d3d3b; }
 
 p {
   line-height: 1.5rem;
@@ -478,21 +479,53 @@ code {
 
 .wrapper {
   width: 100vw;
-  min-height: 100vh;
+  height: calc(100vh - 75px);
   display: flex; }
   @media (max-width: 768px) {
     .wrapper {
       flex-wrap: wrap; } }
 
+nav {
+  width: 100vw;
+  height: 50px;
+  border-bottom: 1px solid #a2a9af;
+  padding: 0 20px; }
+  nav #logo {
+    height: 30px;
+    margin-top: 10px;
+    width: 50px; }
+    nav #logo #pen, nav #logo #left-bracket, nav #logo #right-bracket {
+      fill: #a2a9af; }
+  nav span {
+    line-height: 50px;
+    font-weight: light;
+    color: #a2a9af;
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0; }
+
+footer {
+  width: 100vw;
+  height: 25px;
+  border-top: 1px solid #a2a9af;
+  padding: 0 20px; }
+  footer .characterCount, footer span {
+    line-height: 25px;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0; }
+
 .editor, .preview {
-  width: 50vw;
-  height: 100vh;
+  width: 50%;
+  height: 100%;
   overflow: scroll;
   padding: 20px; }
   @media (max-width: 768px) {
     .editor, .preview {
-      width: 100vw;
-      height: 50vh; } }
+      width: 100%;
+      height: 50%; } }
 
 .editor {
   border: 0;
@@ -501,14 +534,14 @@ code {
   .editor:focus {
     outline: none; }
   .editor::-webkit-resizer {
-    border: 10px solid #999;
+    border: 8px solid #a2a9af;
     border-top-color: transparent;
     border-left-color: transparent; }
 
 .preview {
-  background: #eee;
-  border-left: 3px solid #999; }
+  background: #ebedec;
+  border-left: 1px solid #a2a9af; }
   @media (max-width: 768px) {
     .preview {
       border-left: 0;
-      border-top: 3px solid #999; } }
+      border-top: 1px solid #a2a9af; } }

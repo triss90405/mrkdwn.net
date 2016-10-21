@@ -1,8 +1,6 @@
-/******************
-Declare variables
-******************/
 var editorWrapper = document.getElementById('editor');
 var previewWrapper = document.getElementById('preview');
+var characterCount = document.getElementById('characterCount');
 
 var init = function() {
   loadData();
@@ -10,10 +8,13 @@ var init = function() {
 };
 
 
+
 /* Get data from local storage on load */
 var loadData = function() {
-  editorWrapper.innerHTML = localStorage.getItem("markdown");
+  editorWrapper.innerHTML = localStorage.getItem('markdown');
 };
+
+
 
 /* Editor */
 var editor = function(input, preview) {
@@ -28,10 +29,18 @@ var editor = function(input, preview) {
     localStorage.setItem('markdown', input.value);
   };
 
+  // Display character count
+  this.characters = function() {
+    var char = localStorage.getItem('markdown').length;
+    document.getElementById('characterCount').innerHTML = char;
+  };
+
   input.editor = this;
   this.update();
   this.save();
+  this.characters();
 };
+
 
 init();
 

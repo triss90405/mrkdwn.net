@@ -1,0 +1,14 @@
+footer {
+  width: 100vw;
+  height: 25px;
+  border-top: 1px solid $color4;
+  padding: 0 20px;
+  .characterCount, span {
+    line-height: 25px;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+  }
+}

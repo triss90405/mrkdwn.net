@@ -11,16 +11,36 @@
 </head>
 <body>
 
-  <div class="wrapper">
-    <textarea name="editor"
-              class="editor"
-              id="editor"
-              oninput="this.editor.update();this.editor.save()"
-              placeholder="Type som text here...">
-    </textarea>
+  <nav>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <svg id="logo" width="305px" height="195px" viewBox="0 0 305 195" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>logo</title>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(0.000000, -2.000000)" fill="#000000">
+                <path id="pen" d="M133.535774,24.5490874 L163.580001,24.5490874 L163.580001,155.523277 L133.535774,155.523277 L133.535774,24.5490874 Z M147.54305,199.058399 C148.103529,200.613658 149.015672,200.604151 149.572725,199.058399 L163.580001,160.189988 L133.535774,160.189988 L147.54305,199.058399 Z M133.535774,2.43881899 C133.535774,0.777316283 134.885079,-0.569597789 136.526369,-0.569597789 L160.589406,-0.569597789 C162.241066,-0.569597789 163.580001,0.780091429 163.580001,2.43881899 L163.580001,19.5253504 L133.535774,19.5253504 L133.535774,2.43881899 Z" id="Combined-Shape" transform="translate(148.557887, 99.825842) rotate(-336.000000) translate(-148.557887, -99.825842) "></path>
+                <g id="left-bracket" transform="translate(0.000000, 1.000000)">
+                    <rect id="Rectangle-5" transform="translate(41.147835, 54.640068) rotate(-326.000000) translate(-41.147835, -54.640068) " x="31.6478347" y="-4.85993185" width="19" height="119" rx="5"></rect>
+                    <rect id="Rectangle-5-Copy" transform="translate(41.147835, 142.640068) scale(1, -1) rotate(-326.000000) translate(-41.147835, -142.640068) " x="31.6478347" y="83.1400681" width="19" height="119" rx="5"></rect>
+                </g>
+                <g id="right-bracket" transform="translate(222.000000, 0.000000)">
+                    <rect id="Rectangle-5-Copy-3" transform="translate(41.147835, 54.780136) scale(-1, 1) rotate(-326.000000) translate(-41.147835, -54.780136) " x="31.6478347" y="-4.7198637" width="19" height="119" rx="5"></rect>
+                    <rect id="Rectangle-5-Copy-2" transform="translate(41.147835, 142.780136) scale(-1, -1) rotate(-326.000000) translate(-41.147835, -142.780136) " x="31.6478347" y="83.2801363" width="19" height="119" rx="5"></rect>
+                </g>
+            </g>
+        </g>
+    </svg>
+    <span class="">mrkdwn.net</span>
+  </nav>
 
+  <div class="wrapper">
+    <textarea name="editor" class="editor" id="editor" oninput="this.editor.update();this.editor.save();this.editor.characters()" placeholder="Type some text here..."></textarea>
     <div class="preview" id="preview"></div>
   </div>
+
+  <footer>
+    <span>Characters: </span>
+    <span id="characterCount" class="characterCount"></span>
+  </footer>
 
 <script src="js/markdown.js"></script>
 <script src="js/mrkdwn-io.js"></script>
