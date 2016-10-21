@@ -12,7 +12,7 @@
 .editor {
   border: 0;
   resize: horizontal;
-  font-family: Consolas, monospace;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   &:focus {
     outline: none;
   }
@@ -25,9 +25,9 @@
 
 .preview {
   background: #eee;
-  border-left: 2px solid #999;
+  border-left: 3px solid #999;
   @media(max-width: 768px) {
     border-left: 0;
-    border-top: 2px solid #999;
+    border-top: 3px solid #999;
   }
 }
