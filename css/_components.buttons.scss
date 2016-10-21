@@ -1,5 +1,5 @@
 button, .button {
-  color: $color4;
+  color: $color4 !important;
   text-decoration: none;
   padding: 7px 15px;
   font-size: 1rem;
@@ -8,6 +8,6 @@ button, .button {
   transition: all 150ms ease-in-out;
   &:hover {
     background: $color4;
-    color: $color1;
+    color: $color1 !important;
   }
 }

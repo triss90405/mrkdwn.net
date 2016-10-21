@@ -37,6 +37,7 @@ blockquote {
   margin-bottom: 1.5rem;
   border-left: 4px solid $color1;
   padding-left: 10px;
+  background: darken($color3, 5%);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -85,6 +86,18 @@ table th {
   line-height: 33px;
 }
 
+pre {
+  background: darken($color3, 10%);
+  padding: 10px;
+}
+
 code {
   vertical-align: bottom;
+}
+
+a {
+  color: $color5;
+  &:hover {
+    color: darken($color5, 15%);
+  }
 }

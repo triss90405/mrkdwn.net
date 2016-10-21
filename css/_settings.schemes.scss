@@ -24,4 +24,17 @@ body.dark {
       color: $color3;
     }
   }
+  pre {
+    background: $color1;
+  }
+  blockquote {
+    background: $color1;
+    border-left-color: $color2;
+  }
+  a {
+    color: lighten($color5, 10%);
+    &:hover {
+      color: $color5;  
+    }
+  }
 }
