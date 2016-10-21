@@ -1,1 +1,1 @@
-function Editor(t,e){this.update=function(){e.innerHTML=markdown.toHTML(t.value)},t.editor=this,this.update()}var $=function(t){return document.getElementById(t)};new Editor($("editor"),$("preview"));
+function editor(t,e){this.update=function(){e.innerHTML=markdown.toHTML(t.value)},t.editor=this,this.update()}var $=function(t){return document.getElementById(t)};editor($("editor"),$("preview"));

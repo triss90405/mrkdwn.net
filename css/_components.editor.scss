@@ -12,6 +12,7 @@
 .editor {
   border: 0;
   resize: horizontal;
+  font-family: Consolas, monospace;
   &:focus {
     outline: none;
   }

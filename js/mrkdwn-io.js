@@ -1,4 +1,4 @@
-function Editor(input, preview) {
+function editor(input, preview) {
 
   this.update = function () {
 
@@ -15,4 +15,6 @@ var $ = function (id) {
   return document.getElementById(id);
 };
 
-new Editor($("editor"), $("preview"));
+
+
+editor($("editor"), $("preview"));

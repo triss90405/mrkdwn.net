@@ -425,7 +425,8 @@ template {
 
 .editor {
   border: 0;
-  resize: horizontal; }
+  resize: horizontal;
+  font-family: Consolas, monospace; }
   .editor:focus {
     outline: none; }
   .editor::-webkit-resizer {
