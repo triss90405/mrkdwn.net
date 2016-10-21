@@ -69,15 +69,15 @@ var save = function() {
   var saveButton = document.getElementById('save');
   saveButton.addEventListener('click', function() {
     localStorage.setItem('markdown', editorWrapper.innerHTML);
-    window.location.reload(true);
+    window.location.reload();
   });
 };
 
 
 /* Tab indent in editor */
 var indentOnTab = function() {
-  var el = document.getElementById('editor');
-  tabIndent.render(el);
+  var editor = document.getElementById('editor');
+  tabIndent.render(editor);
 };
 
 

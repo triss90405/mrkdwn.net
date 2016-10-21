@@ -2,13 +2,24 @@ body.dark {
   nav, footer {
     background: $color2;
   }
+  nav {
+    border-bottom-color: darken($color1, 100%);
+  }
+  footer {
+    border-top-color: darken($color1, 100%);
+  }
   color: $color3;
   .editor {
     color: $color3;
     background: $color1;
+    &::-webkit-resizer {
+      border-right-color: darken($color1, 100%);
+      border-bottom-color: darken($color1, 100%);
+    }
   }
   .preview {
     background: darken($color1, 10%);
+    border-left-color: darken($color1, 100%);
   }
   .dropdown ul {
     background: $color1;
@@ -34,7 +45,7 @@ body.dark {
   a {
     color: lighten($color5, 10%);
     &:hover {
-      color: $color5;  
+      color: $color5;
     }
   }
 }

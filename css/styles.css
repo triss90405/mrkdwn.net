@@ -3,11 +3,19 @@ body.dark {
   color: #ebedec; }
   body.dark nav, body.dark footer {
     background: #4c5870; }
+  body.dark nav {
+    border-bottom-color: black; }
+  body.dark footer {
+    border-top-color: black; }
   body.dark .editor {
     color: #ebedec;
     background: #3d3d3b; }
+    body.dark .editor::-webkit-resizer {
+      border-right-color: black;
+      border-bottom-color: black; }
   body.dark .preview {
-    background: #232322; }
+    background: #232322;
+    border-left-color: black; }
   body.dark .dropdown ul {
     background: #3d3d3b;
     border-color: #3d3d3b; }
