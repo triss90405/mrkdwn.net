@@ -1,28 +1,29 @@
 /******************
 Declare variables
 ******************/
-var editorWrapper = document.getElementById('editor'),
-    previewWrapper = document.getElementById('preview');
+var editorWrapper = document.getElementById('editor');
+var previewWrapper = document.getElementById('preview');
 
-/******************
-Save data in localstorage
-******************/
-var loadEditor = function() {
-  editorWrapper.innerHTML = localStorage.getItem("markdown");
+var init = function() {
+  loadData();
+  editor(editorWrapper, previewWrapper);
 };
 
 
-/******************
-Update and compile the preview input to preview area
-******************/
+/* Get data from local storage on load */
+var loadData = function() {
+  editorWrapper.innerHTML = localStorage.getItem("markdown");
+};
+
+/* Editor */
 var editor = function(input, preview) {
 
-  // Compile and update the to the preview
+  // Compile and update to the preview
   this.update = function() {
     preview.innerHTML = markdown.toHTML(input.value);
   };
 
-  // Save data to localstorage
+  // Save data to localStorage
   this.save = function() {
     localStorage.setItem('markdown', input.value);
   };
@@ -32,9 +33,14 @@ var editor = function(input, preview) {
   this.save();
 };
 
+init();
 
-/******************
-Run the app
-******************/
-loadEditor();
-editor(editorWrapper, previewWrapper);
+
+/*
+  Todo
+    - Resize windows(editor and preview)
+    - Color shceme changer
+    - Save color scheme choice to localstorage
+    - Manual save button (navigation)
+    - Info bar (footer)
+*/
