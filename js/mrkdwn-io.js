@@ -3,6 +3,7 @@
   - Resize windows(editor and preview)
   - Manual save button (navigation)
   - Lorem text
+  - Manual save
 */
 
 
@@ -13,7 +14,7 @@ var init = function() {
   loadData();
   editor(editorWrapper, previewWrapper);
   colorScheme();
-  save();
+  //save();
   indentOnTab();
 };
 
@@ -65,13 +66,13 @@ var colorScheme = function() {
 
 
 /* Manual save */
-var save = function() {
-  var saveButton = document.getElementById('save');
-  saveButton.addEventListener('click', function() {
-    localStorage.setItem('markdown', editorWrapper.innerHTML);
-    window.location.reload();
-  });
-};
+// var save = function() {
+//   var saveButton = document.getElementById('save');
+//   saveButton.addEventListener('click', function() {
+//     localStorage.setItem('markdown', editorWrapper.innerHTML);
+//     window.location.reload();
+//   });
+// };
 
 
 /* Tab indent in editor */
