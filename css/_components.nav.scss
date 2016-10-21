@@ -4,19 +4,22 @@ nav {
   border-bottom: 1px solid $color4;
   padding: 0 20px;
   #logo {
-    height: 30px;
-    margin-top: 10px;
+    height: 25px;
+    margin-top: 12.5px;
     width: 50px;
     #pen, #left-bracket, #right-bracket {
       fill: $color4;
     }
   }
-  span {
-    line-height: 50px;
+  .brand-name {
     font-weight: light;
     color: $color4;
     font-size: 1.7rem;
-    margin: 0;
-    padding: 0;
+    position: relative;
+    top: -3px;
+  }
+  .save-button {
+    float: right;
+    margin-top: 7px;
   }
 }

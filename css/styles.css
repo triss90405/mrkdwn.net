@@ -435,7 +435,9 @@ ol ol {
 blockquote {
   line-height: 1.5rem;
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #3d3d3b;
+  padding-left: 10px; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 1.5rem;
@@ -485,24 +487,38 @@ code {
     .wrapper {
       flex-wrap: wrap; } }
 
+button, .button {
+  color: #a2a9af;
+  text-decoration: none;
+  padding: 7px 15px;
+  font-size: 1rem;
+  border-radius: 3px;
+  border: 1px solid #a2a9af;
+  transition: all 150ms ease-in-out; }
+  button:hover, .button:hover {
+    background: #a2a9af;
+    color: #3d3d3b; }
+
 nav {
   width: 100vw;
   height: 50px;
   border-bottom: 1px solid #a2a9af;
   padding: 0 20px; }
   nav #logo {
-    height: 30px;
-    margin-top: 10px;
+    height: 25px;
+    margin-top: 12.5px;
     width: 50px; }
     nav #logo #pen, nav #logo #left-bracket, nav #logo #right-bracket {
       fill: #a2a9af; }
-  nav span {
-    line-height: 50px;
+  nav .brand-name {
     font-weight: light;
     color: #a2a9af;
     font-size: 1.7rem;
-    margin: 0;
-    padding: 0; }
+    position: relative;
+    top: -3px; }
+  nav .save-button {
+    float: right;
+    margin-top: 7px; }
 
 footer {
   width: 100vw;
@@ -545,3 +561,94 @@ footer {
     .preview {
       border-left: 0;
       border-top: 1px solid #a2a9af; } }
+
+.dropdown {
+  position: relative;
+  float: right; }
+  .dropdown:hover ul {
+    opacity: 1;
+    visibility: visible; }
+
+label {
+  float: right;
+  line-height: 50px;
+  margin-left: 20px;
+  color: #a2a9af;
+  text-decoration: none;
+  transition: all 150ms ease-in-out; }
+  label #arrow-down {
+    width: 10px;
+    position: relative;
+    top: 5px; }
+    label #arrow-down path {
+      fill: #a2a9af;
+      transition: all 150ms ease-in-out; }
+  label:hover {
+    color: #3d3d3b; }
+    label:hover #arrow-down path {
+      fill: #3d3d3b; }
+
+ul {
+  position: absolute;
+  padding: 4px 0;
+  top: 20px;
+  right: 0;
+  width: 100px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.05);
+  list-style-type: none;
+  opacity: 0;
+  visibility: hidden;
+  text-align: left;
+  transition: all 200ms; }
+  ul:before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    height: 12px;
+    width: 100%;
+    background-color: transparent; }
+  ul:after {
+    content: '';
+    position: absolute;
+    right: 6px;
+    top: -16px;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-bottom-color: #cccccc; }
+  ul li {
+    padding: 5px 10px;
+    color: #999999;
+    cursor: pointer;
+    transition: all 100ms; }
+    ul li:hover {
+      background-color: #e6e6e6;
+      color: black; }
+    ul li:first-of-type:after {
+      content: '';
+      position: absolute;
+      right: 6px;
+      top: -15px;
+      height: 0;
+      width: 0;
+      z-index: 1;
+      border: 8px solid transparent;
+      border-bottom-color: white;
+      pointer-events: none; }
+    ul li span.dark,
+    ul li span.light {
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      position: relative;
+      top: 3px;
+      left: 5px;
+      border-radius: 50%;
+      border: 1px solid #4c5870; }
+    ul li span.dark {
+      background: black; }
+    ul li span.light {
+      background: white; }

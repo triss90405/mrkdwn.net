@@ -1,0 +1,13 @@
+button, .button {
+  color: $color4;
+  text-decoration: none;
+  padding: 7px 15px;
+  font-size: 1rem;
+  border-radius: 3px;
+  border: 1px solid $color4;
+  transition: all 150ms ease-in-out;
+  &:hover {
+    background: $color4;
+    color: $color1;
+  }
+}
