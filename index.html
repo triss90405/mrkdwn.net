@@ -13,14 +13,14 @@
 
   <div class="wrapper">
 
-    <textarea name="editor" class="editor" id="editor">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod mollitia sequi fuga quos, modi nostrum, totam nobis. Impedit ad inventore quibusdam beatae quod tempore illum, deleniti laboriosam est necessitatibus!
-    </textarea>
+    <textarea name="editor" class="editor" id="editor" oninput="this.editor.update()"></textarea>
 
-    <div class="preview" id="preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod mollitia sequi fuga quos, modi nostrum, totam nobis. Impedit ad inventore quibusdam beatae quod tempore illum, deleniti laboriosam est necessitatibus!
-</div>
+    <div class="preview" id="preview"></div>
 
   </div>
+
+<script src="js/markdown.js"></script>
+<script src="js/mrkdwn-io.js"></script>
 
 </body>
 </html>
