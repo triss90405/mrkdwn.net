@@ -443,6 +443,10 @@ template {
 [hidden] {
   display: none; }
 
+*::selection {
+  background: #2a93d4;
+  color: #ebedec; }
+
 html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;

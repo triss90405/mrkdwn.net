@@ -79,15 +79,12 @@ var colorScheme = function() {
 
 /* Toggle show HTML */
 var toggleHtml = function() {
-
   // Convert html tags to entities
   var htmlEntities = function(str) {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   };
-
   var toggleButton = document.getElementById('show-html');
   var htmlContent = previewWrapper.innerHTML;
-
   toggleButton.addEventListener('click', function() {
     this.classList.toggle('active');
 
