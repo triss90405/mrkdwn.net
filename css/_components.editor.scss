@@ -13,21 +13,59 @@
   border: 0;
   resize: horizontal;
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  &:focus {
-    outline: none;
-  }
   &::-webkit-resizer {
     border: 8px solid $color4;
     border-top-color: transparent;
     border-left-color: transparent;
+  }
+  &:focus {
+    outline: none;
   }
 }
 
 .preview {
   background: $color3;
   border-left: 1px solid $color4;
+  img {
+    max-width: 100%;
+  }
+  code:focus,
+  pre:focus {
+    outline:0;
+  }
   @media(max-width: 768px) {
     border-left: 0;
     border-top: 1px solid $color4;
+  }
+}
+
+.show-html {
+  position: absolute;
+  top: 55px;
+  right: 0px;
+  cursor: pointer;
+  &:hover {
+    svg path {
+      fill: $color5;
+    }
+  }
+  &.active {
+    svg path {
+      fill: $color5;
+    }
+    &:hover {
+      svg path {
+        fill: darken($color5, 10%);
+      }
+    }
+  }
+  svg {
+    height: 60px;
+    width: 50px;
+
+    path {
+      transition: all 150ms ease-in-out;
+      fill: $color4;
+    }
   }
 }

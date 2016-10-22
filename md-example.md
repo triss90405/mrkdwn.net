@@ -1,5 +1,5 @@
-An h1 header
-============
+# An h1 header
+
 
 Paragraphs are separated by a blank line.
 
@@ -14,8 +14,8 @@ look like:
 > written like so.
 
 
-An h2 header
-------------
+## An h2 header
+
 
 Here's a numbered list:
 
@@ -37,7 +37,7 @@ indenting the block, you can use delimited blocks, if you like:
 delimited block for Pandoc to syntax highlight it:
 
 
-### An h3 header ###
+### An h3 header
 
 Now a nested list:
 
@@ -80,4 +80,4 @@ A horizontal rule follows.
 
 Images can be specified like so:
 
-![example image](http://fillmurray.com/500/200 "An exemplary image")
+![example image](http://fillmurray.com/1200/400 "An exemplary image")

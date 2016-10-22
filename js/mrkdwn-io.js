@@ -4,6 +4,7 @@
   - Manual save button (navigation)
   - Lorem text
   - Manual save
+  - View html (http://stackoverflow.com/questions/11092182/display-html-code-in-javascript-string)
 */
 
 
@@ -16,6 +17,7 @@ var init = function() {
   colorScheme();
   //save();
   indentOnTab();
+  toggleHtml();
 };
 
 
@@ -73,6 +75,33 @@ var colorScheme = function() {
 //     window.location.reload();
 //   });
 // };
+
+
+/* Toggle show HTML */
+var toggleHtml = function() {
+
+  // Convert html tags to entities
+  var htmlEntities = function(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  };
+
+  var toggleButton = document.getElementById('show-html');
+  var htmlContent = previewWrapper.innerHTML;
+
+  toggleButton.addEventListener('click', function() {
+    this.classList.toggle('active');
+
+    if (previewWrapper.classList.contains('html')) {
+      previewWrapper.classList.remove('html');
+      previewWrapper.innerHTML = htmlContent;
+    }
+    else {
+      var convertedHtml = htmlEntities(htmlContent);
+      previewWrapper.classList.add('html');
+      previewWrapper.innerHTML = '<code contenteditable="true"><pre style="background:transparent;white-space:pre-wrap;">' + convertedHtml + '</pre></code>';
+    }
+  });
+};
 
 
 /* Tab indent in editor */

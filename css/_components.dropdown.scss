@@ -1,6 +1,7 @@
 .dropdown {
   position: relative;
   float: right;
+  z-index: 2;
   &:hover ul {
     opacity: 1;
     visibility: visible;

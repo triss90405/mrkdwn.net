@@ -594,24 +594,48 @@ footer {
   border: 0;
   resize: horizontal;
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif; }
-  .editor:focus {
-    outline: none; }
   .editor::-webkit-resizer {
     border: 8px solid #a2a9af;
     border-top-color: transparent;
     border-left-color: transparent; }
+  .editor:focus {
+    outline: none; }
 
 .preview {
   background: #ebedec;
   border-left: 1px solid #a2a9af; }
+  .preview img {
+    max-width: 100%; }
+  .preview code:focus,
+  .preview pre:focus {
+    outline: 0; }
   @media (max-width: 768px) {
     .preview {
       border-left: 0;
       border-top: 1px solid #a2a9af; } }
 
+.show-html {
+  position: absolute;
+  top: 55px;
+  right: 0px;
+  cursor: pointer; }
+  .show-html:hover svg path {
+    fill: #2a93d4; }
+  .show-html.active svg path {
+    fill: #2a93d4; }
+  .show-html.active:hover svg path {
+    fill: #2275a9; }
+  .show-html svg {
+    height: 60px;
+    width: 50px; }
+    .show-html svg path {
+      transition: all 150ms ease-in-out;
+      fill: #a2a9af; }
+
 .dropdown {
   position: relative;
-  float: right; }
+  float: right;
+  z-index: 2; }
   .dropdown:hover ul {
     opacity: 1;
     visibility: visible; }
