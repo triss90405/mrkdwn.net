@@ -13,6 +13,7 @@ var init = function() {
   colorScheme();
   indentOnTab();
   toggleHtml();
+  toggleHelp();
 };
 
 
@@ -94,6 +95,24 @@ var toggleHtml = function() {
 var indentOnTab = function() {
   var editor = document.getElementById('editor');
   tabIndent.render(editor);
+};
+var toggleHelp = function() {
+  var helpButton = document.getElementById('helpButton');
+  var helpContainer = document.getElementById('helpContainer');
+  var helpClose = document.getElementById('helpClose');
+
+  helpButton.addEventListener('click', function() {
+    helpContainer.classList.toggle('active');
+  });
+  helpClose.addEventListener('click', function() {
+    helpContainer.classList.remove('active');
+  });
+  document.addEventListener("keydown", function(event) {
+    var pressedKey = event.which;
+    if(pressedKey = 27) {
+      helpContainer.classList.remove('active');
+    }
+  });
 };
 
 

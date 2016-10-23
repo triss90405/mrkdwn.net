@@ -35,6 +35,10 @@ body.dark {
     color: #3395ff; }
     body.dark a:hover {
       color: #007AFF; }
+  body.dark .help-modal {
+    color: #3d3d3b; }
+    body.dark .help-modal code, body.dark .help-modal pre {
+      color: #ebedec; }
 
 * {
   box-sizing: border-box; }
@@ -730,3 +734,56 @@ ul.dropdown-menu {
       background: black; }
     ul.dropdown-menu li span.light {
       background: white; }
+
+.help-modal {
+  position: absolute;
+  top: 0;
+  left: 15vw;
+  top: 60px;
+  z-index: 3;
+  background: #ebedec;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  width: 70vw;
+  height: calc(100vh - 100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 200ms ease-in-out; }
+  .help-modal.active {
+    visibility: visible;
+    opacity: 1; }
+  @media (max-width: 768px) {
+    .help-modal {
+      width: 95vw;
+      left: 2.5vw; } }
+  .help-modal .header {
+    background: #4c5870;
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); }
+    .help-modal .header .title {
+      color: #ebedec;
+      font-size: 1.5rem;
+      font-weight: bold; }
+    .help-modal .header .close {
+      height: 1.5rem;
+      width: 1.5rem;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer; }
+      .help-modal .header .close:hover svg path {
+        fill: #3d3d3b; }
+      .help-modal .header .close svg path {
+        fill: #ebedec;
+        transition: all 150ms ease-in-out; }
+  .help-modal .content {
+    padding: 30px;
+    overflow: scroll;
+    height: calc(100% - 67px);
+    border-radius: 0 0 5px 5px; }
+    .help-modal .content code, .help-modal .content pre {
+      overflow: scroll;
+      white-space: pre-wrap;
+      padding: 20px; }

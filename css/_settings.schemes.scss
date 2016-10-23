@@ -48,4 +48,10 @@ body.dark {
       color: $color5;
     }
   }
+  .help-modal {
+    color: $color1;
+    code, pre {
+      color: $color3;
+    }
+  }
 }

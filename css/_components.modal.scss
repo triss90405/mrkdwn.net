@@ -1,0 +1,68 @@
+.help-modal {
+  position: absolute;
+  top: 0;
+  left: 15vw;
+  top: 60px;
+  z-index: 3;
+  background: $color3;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  border-radius: 5px;
+  width: 70vw;
+  height: calc(100vh - 100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  @media(max-width: 768px) {
+    width: 95vw;
+    left: 2.5vw;
+  }
+  .header {
+    background: $color2;
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    .title {
+      color: $color3;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .close {
+      height: 1.5rem;
+      width: 1.5rem;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer;
+      &:hover {
+        svg {
+          path {
+            fill: $color1;
+          }
+        }
+      }
+      svg {
+        path {
+          fill: $color3;
+          transition: all 150ms ease-in-out;
+        }
+      }
+    }
+  }
+  .content {
+    padding: 30px;
+    overflow: scroll;
+    height: calc(100% - 67px);
+    border-radius: 0 0 5px 5px;
+    code, pre {
+      overflow: scroll;
+      white-space: pre-wrap;
+      padding: 20px;
+    }
+  }
+
+}
