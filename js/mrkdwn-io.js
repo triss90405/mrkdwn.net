@@ -1,10 +1,7 @@
 /*
   Todo
-  - Resize windows(editor and preview)
   - Manual save button (navigation)
   - Lorem text
-  - Manual save
-  - View html (http://stackoverflow.com/questions/11092182/display-html-code-in-javascript-string)
 */
 
 
@@ -15,7 +12,6 @@ var init = function() {
   loadData();
   editor(editorWrapper, previewWrapper);
   colorScheme();
-  //save();
   indentOnTab();
   toggleHtml();
 };
@@ -32,6 +28,8 @@ var editor = function(input, preview) {
   // Compile and update to the preview
   this.update = function() {
     preview.innerHTML = markdown.toHTML(input.value);
+    previewWrapper.classList.remove('html');
+    document.getElementById('show-html').classList.remove('active');
   };
   // Save data to localStorage
   this.save = function() {
@@ -67,15 +65,6 @@ var colorScheme = function() {
 };
 
 
-/* Manual save */
-// var save = function() {
-//   var saveButton = document.getElementById('save');
-//   saveButton.addEventListener('click', function() {
-//     localStorage.setItem('markdown', editorWrapper.innerHTML);
-//     window.location.reload();
-//   });
-// };
-
 
 /* Toggle show HTML */
 var toggleHtml = function() {
@@ -85,6 +74,9 @@ var toggleHtml = function() {
   };
   var toggleButton = document.getElementById('show-html');
   var htmlContent = previewWrapper.innerHTML;
+  document.addEventListener('keydown', function() {
+    htmlContent = previewWrapper.innerHTML;
+  });
   toggleButton.addEventListener('click', function() {
     this.classList.toggle('active');
 
@@ -109,3 +101,12 @@ var indentOnTab = function() {
 
 
 init();
+
+
+/* Manual save */
+var manualSave = function() {
+  localStorage.setItem('markdown', editorWrapper.value);
+  setTimeout(function(){
+    window.location.reload();
+  },100);
+};

@@ -1,11 +1,15 @@
 button, .button {
-  color: $color4 !important;
+  color: $color1 !important;
   text-decoration: none;
   padding: 7px 15px;
   font-size: 1rem;
   border-radius: 3px;
   border: 1px solid $color4;
   transition: all 150ms ease-in-out;
+  cursor: pointer;
+  &:focus {
+    outline: 0;
+  }
   &:hover {
     background: $color4;
     color: $color1 !important;

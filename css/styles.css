@@ -32,9 +32,9 @@ body.dark {
     background: #3d3d3b;
     border-left-color: #4c5870; }
   body.dark a {
-    color: #54a9dd; }
+    color: #3395ff; }
     body.dark a:hover {
-      color: #2a93d4; }
+      color: #007AFF; }
 
 * {
   box-sizing: border-box; }
@@ -444,7 +444,7 @@ template {
   display: none; }
 
 *::selection {
-  background: #2a93d4;
+  background: #007AFF;
   color: #ebedec; }
 
 html {
@@ -526,9 +526,9 @@ code {
   vertical-align: bottom; }
 
 a {
-  color: #2a93d4; }
+  color: #007AFF; }
   a:hover {
-    color: #1d6794; }
+    color: #0055b3; }
 
 .wrapper {
   width: 100vw;
@@ -539,13 +539,16 @@ a {
       flex-wrap: wrap; } }
 
 button, .button {
-  color: #a2a9af !important;
+  color: #3d3d3b !important;
   text-decoration: none;
   padding: 7px 15px;
   font-size: 1rem;
   border-radius: 3px;
   border: 1px solid #a2a9af;
-  transition: all 150ms ease-in-out; }
+  transition: all 150ms ease-in-out;
+  cursor: pointer; }
+  button:focus, .button:focus {
+    outline: 0; }
   button:hover, .button:hover {
     background: #a2a9af;
     color: #3d3d3b !important; }
@@ -624,11 +627,11 @@ footer {
   right: 0px;
   cursor: pointer; }
   .show-html:hover svg path {
-    fill: #2a93d4; }
+    fill: #007AFF; }
   .show-html.active svg path {
-    fill: #2a93d4; }
+    fill: #007AFF; }
   .show-html.active:hover svg path {
-    fill: #2275a9; }
+    fill: #0062cc; }
   .show-html svg {
     height: 60px;
     width: 50px; }
