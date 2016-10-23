@@ -1,6 +1,5 @@
 /*
   Todo
-  - Manual save button (navigation)
   - Lorem text
 */
 
@@ -64,8 +63,6 @@ var colorScheme = function() {
   });
 };
 
-
-
 /* Toggle show HTML */
 var toggleHtml = function() {
   // Convert html tags to entities
@@ -74,7 +71,7 @@ var toggleHtml = function() {
   };
   var toggleButton = document.getElementById('show-html');
   var htmlContent = previewWrapper.innerHTML;
-  document.addEventListener('keydown', function() {
+  document.addEventListener('keyup', function() {
     htmlContent = previewWrapper.innerHTML;
   });
   toggleButton.addEventListener('click', function() {
@@ -87,7 +84,7 @@ var toggleHtml = function() {
     else {
       var convertedHtml = htmlEntities(htmlContent);
       previewWrapper.classList.add('html');
-      previewWrapper.innerHTML = '<code contenteditable="true"><pre style="background:transparent;white-space:pre-wrap;">' + convertedHtml + '</pre></code>';
+      previewWrapper.innerHTML = '<code><pre style="background:transparent;white-space:pre-wrap;">' + convertedHtml + '</pre></code>';
     }
   });
 };
