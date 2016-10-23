@@ -6,7 +6,6 @@
 
 var editorWrapper = document.getElementById('editor');
 var previewWrapper = document.getElementById('preview');
-var characterCount = document.getElementById('characterCount');
 var init = function() {
   loadData();
   editor(editorWrapper, previewWrapper);
@@ -77,7 +76,6 @@ var toggleHtml = function() {
   });
   toggleButton.addEventListener('click', function() {
     this.classList.toggle('active');
-
     if (previewWrapper.classList.contains('html')) {
       previewWrapper.classList.remove('html');
       previewWrapper.innerHTML = htmlContent;
@@ -96,11 +94,13 @@ var indentOnTab = function() {
   var editor = document.getElementById('editor');
   tabIndent.render(editor);
 };
+
+
+/* Show help Modal */
 var toggleHelp = function() {
   var helpButton = document.getElementById('helpButton');
   var helpContainer = document.getElementById('helpContainer');
   var helpClose = document.getElementById('helpClose');
-
   helpButton.addEventListener('click', function() {
     helpContainer.classList.toggle('active');
   });
@@ -109,7 +109,7 @@ var toggleHelp = function() {
   });
   document.addEventListener("keydown", function(event) {
     var pressedKey = event.which;
-    if(pressedKey = 27) {
+    if(pressedKey === 27) {
       helpContainer.classList.remove('active');
     }
   });

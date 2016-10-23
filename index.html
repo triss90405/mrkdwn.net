@@ -86,11 +86,27 @@ Alt-H1
 Alt-H2
 ------</pre></code>
 
+<h1>H1</h1>
+<h2>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+<h6>H6</h6>
+<p>Alternatively, for H1 and H2, an underline-ish style:</p>
+<h1>Alt-H1</h1>
+<h2>Alt-H2</h2>
+<hr>
+
 <h3>Emphasis</h3>
 <code><pre>Emphasis, aka italics, with *asterisks* or _underscores_.
 Strong emphasis, aka bold, with **asterisks** or __underscores__.
 Combined emphasis with **asterisks and _underscores_**.
 Strikethrough uses two tildes. ~~Scratch this</pre></code>
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.
+Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.
+Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.
+Strikethrough uses two tildes. ~~Scratch this</p>
+<hr>
 
 <h3>Lists</h3>
 <code><pre>1. First ordered list item
@@ -109,6 +125,19 @@ Strikethrough uses two tildes. ~~Scratch this</pre></code>
 * Unordered list can use asterisks
 - Or minuses
 + Or pluses</pre></code>
+
+<ol><li>First ordered list item</li><li>Another item
+⋅⋅* Unordered sub-list.</li><li>Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list</li><li>And another item.</li></ol>
+
+<p>⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).</p>
+
+<p>⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p>
+
+<ul><li>Unordered list can use asterisks</li><li>Or minuses</li><li>Or pluses</li></ul>
+<hr>
 
 <h3>Links</h3>
 <code><pre>[I'm an inline-style link](https://www.google.com)
@@ -133,6 +162,25 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com</pre></code>
 
+<p><a href="https://www.google.com">I'm an inline-style link</a></p>
+
+<p><a href="https://www.google.com" title="Google's Homepage">I'm an inline-style link with title</a></p>
+
+<p><a href="https://www.mozilla.org">I'm a reference-style link</a></p>
+
+<p><a href="../blob/master/LICENSE">I'm a relative reference to a repository file</a></p>
+
+<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+
+<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a>.</p>
+
+<p>URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or <a href="http://www.example.com">http://www.example.com</a> and sometimes
+example.com (but not on Github, for example).</p>
+
+<p>Some text to show that the reference links can follow later.</p>
+<hr>
+
 <h3>Images</h3>
 <code><pre>Here's our logo (hover to see the title text):
 
@@ -144,6 +192,15 @@ Reference-style:
 
 [logo]: http://fillmurray.com/500/300 "Logo Title Text 2"</pre></code>
 
+<p>Here's our logo (hover to see the title text):</p>
+
+<p>Inline-style:
+<img src="http://fillmurray.com/500/300" alt="alt text" title="Logo Title Text 1"></p>
+
+<p>Reference-style:
+<img src="http://fillmurray.com/500/300" alt="alt text" title="Logo Title Text 2"></p>
+<hr>
+
 <h3>Code and Syntax Highlighting</h3>
 <code><pre>```javascript
 var s = "JavaScript syntax highlighting";
@@ -154,11 +211,18 @@ alert(s);
 s = "Python syntax highlighting"
 print s
 ```
+</pre></code>
 
-```
-No language indicated, so no syntax highlighting.
-But let's throw in a <b>tag</b>.
-```</pre></code>
+<p><code>javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+</code></p>
+
+<p><code>python
+s = "Python syntax highlighting"
+print s
+</code></p>
+<hr>
 
 <h3>Blockquotes</h3>
 <code><pre>> Blockquotes are very handy in email to emulate reply text.
@@ -168,6 +232,13 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. </pre></code>
 
+<blockquote><p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p></blockquote>
+
+<p>Quote break.</p>
+
+<blockquote><p>This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote. &lt;/pre&gt;&lt;/code&gt;</p></blockquote>
+<hr>
 
 <h3>Horizontal Rule</h3>
 <code><pre>Three or more...
@@ -184,6 +255,21 @@ ___
 
 Underscores</pre></code>
 
+<p>Three or more...</p>
+
+<hr>
+
+<p>Hyphens</p>
+
+<hr>
+
+<p>Asterisks</p>
+
+<hr>
+
+<p>Underscores</p>
+<hr>
+
 <h3>Line Breaks</h3>
 <code><pre>Here's a line for us to start with.
 
@@ -192,9 +278,20 @@ This line is separated from the one above by two newlines, so it will be a *sepa
 This line is also a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*.</pre></code>
 
+<p>Here's a line for us to start with.</p>
+
+<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
+
+<p>This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it's a separate line in the <em>same paragraph</em>.</p>
+<hr>
+
+
 <h3>Youtube videos</h3>
 <code><pre>[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_ID_HERE/0.jpg)]
 (http://www.youtube.com/watch?v=YOUTUBE_ID_HERE)</pre></code>
+<p><a href="http://www.youtube.com/watch?v=YOUTUBE_ID_HERE"><img src="http://img.youtube.com/vi/YOUTUBE_ID_HERE/0.jpg" alt="IMAGE ALT TEXT HERE" class="hoverZoomLink"></a></p>
+<hr>
 
 <br>
 Source: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Adam Pritchard</a>
