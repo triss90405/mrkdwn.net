@@ -7,8 +7,23 @@ nav {
     height: 25px;
     margin-top: 12.5px;
     width: 50px;
-    #pen, #left-bracket, #right-bracket {
+    path {
       fill: $color4;
+      transition: all 200ms ease-in-out;
+    }
+    #head {
+      fill: $color3;
+    }
+    #line {
+      stroke: $color4;
+    }
+    &:hover {
+      path {
+        fill: $color5;
+      }
+      #line {
+        stroke: $color1;
+      }
     }
   }
   .brand-name {

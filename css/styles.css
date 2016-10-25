@@ -566,8 +566,17 @@ nav {
     height: 25px;
     margin-top: 12.5px;
     width: 50px; }
-    nav #logo #pen, nav #logo #left-bracket, nav #logo #right-bracket {
-      fill: #a2a9af; }
+    nav #logo path {
+      fill: #a2a9af;
+      transition: all 200ms ease-in-out; }
+    nav #logo #head {
+      fill: #ebedec; }
+    nav #logo #line {
+      stroke: #a2a9af; }
+    nav #logo:hover path {
+      fill: #007AFF; }
+    nav #logo:hover #line {
+      stroke: #3d3d3b; }
   nav .brand-name {
     font-weight: light;
     color: #a2a9af;
