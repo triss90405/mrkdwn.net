@@ -533,7 +533,7 @@
 		"outputAbbreviatedPath": "\/css\/styles.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
+		"outputStyle": 3,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
@@ -558,7 +558,7 @@
 		},
 	"\/js\/markdown.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/markdown.js",
 		"outputAbbreviatedPath": "\/js\/min\/markdown-min.js",
@@ -613,7 +613,7 @@
 		},
 	"\/js\/tabindent.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/tabindent.js",
 		"outputAbbreviatedPath": "\/js\/min\/tabindent-min.js",
@@ -627,6 +627,20 @@
 	],
 "lastSavedByUser": "tristan white",
 "manualImportLinks": {
+	"\/js\/mrkdwn-io.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/markdown.js",
+			"position": 0,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/tabindent.js",
+			"position": 1,
+			"type": 0
+			}
+		]
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
