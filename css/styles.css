@@ -5,6 +5,10 @@ body.dark {
     background: #4c5870; }
   body.dark nav {
     border-bottom-color: black; }
+    body.dark nav .save-button:hover {
+      background: #a2a9af;
+      border-color: #3d3d3b;
+      color: black !important; }
   body.dark footer {
     border-top-color: black; }
   body.dark .editor {
@@ -549,40 +553,53 @@ button, .button {
   font-size: 1rem;
   border-radius: 3px;
   border: 1px solid #a2a9af;
+  background: #ebedec;
   transition: all 150ms ease-in-out;
   cursor: pointer; }
   button:focus, .button:focus {
     outline: 0; }
   button:hover, .button:hover {
-    background: #a2a9af;
-    color: #3d3d3b !important; }
+    background: #007AFF;
+    color: #ebedec !important; }
 
 nav {
   width: 100vw;
   height: 50px;
   border-bottom: 1px solid #a2a9af;
   padding: 0 20px; }
-  nav #logo {
-    height: 25px;
-    margin-top: 12.5px;
-    width: 50px; }
-    nav #logo path {
-      fill: #a2a9af;
-      transition: all 200ms ease-in-out; }
-    nav #logo #head {
-      fill: #ebedec; }
-    nav #logo #line {
-      stroke: #a2a9af; }
-    nav #logo:hover path {
+  nav .brand {
+    text-decoration: none; }
+    nav .brand:hover .brand-name {
+      color: #3d3d3b; }
+    nav .brand:hover #logo path {
       fill: #007AFF; }
-    nav #logo:hover #line {
+    nav .brand:hover #logo #line {
       stroke: #3d3d3b; }
-  nav .brand-name {
-    font-weight: light;
-    color: #a2a9af;
-    font-size: 1.7rem;
-    position: relative;
-    top: -3px; }
+    nav .brand #logo {
+      height: 25px;
+      margin-top: 12.5px;
+      width: 50px; }
+      nav .brand #logo span {
+        text-decoration: none; }
+      nav .brand #logo path {
+        fill: #a2a9af;
+        transition: all 200ms ease-in-out; }
+      nav .brand #logo #head {
+        fill: #ebedec; }
+      nav .brand #logo #line {
+        stroke: #a2a9af; }
+    nav .brand .brand-name {
+      font-weight: light;
+      color: #a2a9af;
+      font-size: 1.2rem;
+      line-height: 50px;
+      position: relative;
+      top: -2px;
+      left: -5px;
+      transition: all 200ms ease-in-out; }
+      @media (max-width: 768px) {
+        nav .brand .brand-name {
+          display: none; } }
   nav .save-button {
     float: right;
     margin-top: 7px; }

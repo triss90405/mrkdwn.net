@@ -4,6 +4,11 @@ body.dark {
   }
   nav {
     border-bottom-color: darken($color1, 100%);
+    .save-button:hover {
+      background: $color4;
+      border-color: $color1;
+      color: darken($color1, 50%) !important;
+    }
   }
   footer {
     border-top-color: darken($color1, 100%);

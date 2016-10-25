@@ -5,13 +5,14 @@ button, .button {
   font-size: 1rem;
   border-radius: 3px;
   border: 1px solid $color4;
+  background: $color3;
   transition: all 150ms ease-in-out;
   cursor: pointer;
   &:focus {
     outline: 0;
   }
   &:hover {
-    background: $color4;
-    color: $color1 !important;
+    background: $color5;
+    color: $color3 !important;
   }
 }

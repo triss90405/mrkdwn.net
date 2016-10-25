@@ -3,36 +3,54 @@ nav {
   height: 50px;
   border-bottom: 1px solid $color4;
   padding: 0 20px;
-  #logo {
-    height: 25px;
-    margin-top: 12.5px;
-    width: 50px;
-    path {
-      fill: $color4;
-      transition: all 200ms ease-in-out;
-    }
-    #head {
-      fill: $color3;
-    }
-    #line {
-      stroke: $color4;
-    }
+  .brand {
+    text-decoration: none;
     &:hover {
+      .brand-name {
+        color: $color1;
+      }
+      #logo {
+        path {
+          fill: $color5;
+        }
+        #line {
+          stroke: $color1;
+        }
+      }
+    }
+    #logo {
+      height: 25px;
+      margin-top: 12.5px;
+      width: 50px;
+      span {
+        text-decoration: none;
+      }
       path {
-        fill: $color5;
+        fill: $color4;
+        transition: all 200ms ease-in-out;
+      }
+      #head {
+        fill: $color3;
       }
       #line {
-        stroke: $color1;
+        stroke: $color4;
+      }
+    }
+    .brand-name {
+      font-weight: light;
+      color: $color4;
+      font-size: 1.2rem;
+      line-height: 50px;
+      position: relative;
+      top: -2px;
+      left: -5px;
+      transition: all 200ms ease-in-out;
+      @media(max-width: 768px) {
+        display: none;
       }
     }
   }
-  .brand-name {
-    font-weight: light;
-    color: $color4;
-    font-size: 1.7rem;
-    position: relative;
-    top: -3px;
-  }
+
   .save-button {
     float: right;
     margin-top: 7px;
