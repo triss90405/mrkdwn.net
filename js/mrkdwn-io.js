@@ -64,6 +64,7 @@ var colorScheme = function() {
   });
 };
 
+
 /* Toggle show HTML */
 var toggleHtml = function() {
   // Convert html tags to entities
@@ -129,13 +130,18 @@ var downloadHtml = function() {
 };
 
 
-init();
+/* Run when DOM is loaded */
+document.addEventListener('DOMContentLoaded', function () {
 
+  /* Initialize App */
+  init();
 
-/* Manual save */
-var manualSave = function() {
-  localStorage.setItem('markdown', editorWrapper.value);
-  setTimeout(function(){
-    window.location.reload();
-  },100);
-};
+  /* Manual save */
+  var manualSave = function() {
+    localStorage.setItem('markdown', editorWrapper.value);
+    setTimeout(function(){
+      window.location.reload();
+    },100);
+  };
+
+});

@@ -29,9 +29,9 @@ body.dark {
   }
   .dropdown ul {
     background: $color1;
-    border-color: $color1;
+    border-color: darken($color1, 10%);
     &:after {
-      border-bottom-color: $color2;
+      border-bottom-color: darken($color1, 20%);
     }
     li:first-of-type:after {
       border-bottom-color: $color1;
