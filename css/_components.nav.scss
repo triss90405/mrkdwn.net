@@ -34,6 +34,7 @@ nav {
       }
       #line {
         stroke: $color4;
+        fill: transparent;
       }
     }
     .brand-name {
@@ -54,9 +55,13 @@ nav {
   .save-button, .download-button {
     float: right;
     margin-top: 7px;
+    @media(max-width: 768px) {
+      margin-top: 9.5px;
+    }
   }
   .download-button {
     margin-left: 10px;
+    margin-right: -10px;
   }
 
 }
