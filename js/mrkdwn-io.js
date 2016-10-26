@@ -13,6 +13,7 @@ var init = function() {
   indentOnTab();
   toggleHtml();
   toggleHelp();
+  downloadHtml();
 };
 
 
@@ -112,6 +113,18 @@ var toggleHelp = function() {
     if(pressedKey === 27) {
       helpContainer.classList.remove('active');
     }
+  });
+};
+
+
+/* Download HTML */
+var downloadHtml = function() {
+  var downloadButton = document.getElementById('download');
+  downloadButton.addEventListener('click', function() {
+    var htmlContent = document.getElementById('preview').innerHTML;
+    this.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(htmlContent));
+    this.setAttribute('download', 'mrkdwn.html');
+    console.log(htmlContent);
   });
 };
 

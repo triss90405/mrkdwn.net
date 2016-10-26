@@ -51,8 +51,12 @@ nav {
     }
   }
 
-  .save-button {
+  .save-button, .download-button {
     float: right;
     margin-top: 7px;
   }
+  .download-button {
+    margin-left: 10px;
+  }
+
 }
