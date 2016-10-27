@@ -29,8 +29,10 @@
   img {
     max-width: 100%;
   }
-  code:focus,
-  pre:focus {
+  code, pre {
+    white-space: pre-wrap;
+  }
+  code:focus, pre:focus {
     outline:0;
   }
   @media(max-width: 768px) {

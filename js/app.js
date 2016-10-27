@@ -1,8 +1,5 @@
-/*
-  Todo
-  - Lorem text
-*/
-
+// @codekit-prepend "markdown.js"
+// @codekit-prepend "emmet.js"
 
 var editorWrapper = document.getElementById('editor');
 var previewWrapper = document.getElementById('preview');
@@ -10,10 +7,11 @@ var init = function() {
   loadData();
   editor(editorWrapper, previewWrapper);
   colorScheme();
-  indentOnTab();
+  emmetInit();
   toggleHtml();
   toggleHelp();
   downloadHtml();
+  tabToSave();
 };
 
 
@@ -21,7 +19,6 @@ var init = function() {
 var loadData = function() {
   editorWrapper.innerHTML = localStorage.getItem('markdown');
 };
-
 
 /* Editor */
 var editor = function(input, preview) {
@@ -44,6 +41,23 @@ var editor = function(input, preview) {
   this.update();
   this.save();
   this.characters();
+};
+
+
+/* Save and update when tab */
+var tabToSave = function() {
+  document.addEventListener("keydown", function(event) {
+    if (event.which === 9) {
+      var input = document.getElementById('editor');
+      var preview = document.getElementById('preview');
+      localStorage.setItem('markdown', input.value);
+      var char = localStorage.getItem('markdown').length;
+      preview.innerHTML = markdown.toHTML(input.value);
+      preview.classList.remove('html');
+      document.getElementById('show-html').classList.remove('active');
+      document.getElementById('characterCount').innerHTML = char;
+    }
+  });
 };
 
 
@@ -91,10 +105,12 @@ var toggleHtml = function() {
 };
 
 
-/* Tab indent in editor */
-var indentOnTab = function() {
-  var editor = document.getElementById('editor');
-  tabIndent.render(editor);
+/* Initialize emmet plugin */
+var emmetInit = function() {
+  emmet.require('textarea').setup({
+    pretty_break: true,
+    use_tab: true
+  });
 };
 
 
@@ -125,7 +141,6 @@ var downloadHtml = function() {
     var htmlContent = document.getElementById('preview').innerHTML;
     this.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(htmlContent));
     this.setAttribute('download', 'mrkdwn.html');
-    console.log(htmlContent);
   });
 };
 
